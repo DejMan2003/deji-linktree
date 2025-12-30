@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+:root {
+  --bg-color: #ffffff;
+  --grid-color: rgba(220, 38, 38, 0.1);
+  --text-primary: #000000;
+  --text-secondary: #444444;
+  --border-color: #000000;
+  --accent-red: #dc2626;
+  --font-serif: "EB Garamond", serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 30px 30px;
+  position: relative;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 20px solid var(--accent-red);
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0.05;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.brutalist-border {
+  border: 2px solid var(--border-color);
+  box-shadow: 4px 4px 0px 0px var(--border-color);
+  transition: all 0.2s ease;
+  background: white;
+}
+
+.brutalist-border:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px var(--accent-red);
+  border-color: var(--accent-red);
+}
+
+.brutalist-button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: center;
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 4px;
+  transition: background 0.2s ease;
+}
+
+.brutalist-border:hover .label {
+  background: var(--accent-red);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.floating-block {
+  position: absolute;
+  cursor: grab;
+  user-select: none;
+  z-index: 10;
+}
+
+.floating-block:active {
+  cursor: grabbing;
+}
+
+.center-title {
+  text-align: center;
+  z-index: 5;
+  pointer-events: none;
+}
