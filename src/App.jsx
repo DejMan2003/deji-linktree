@@ -1,14 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Twitter, Instagram, ShoppingCart, Facebook, Music2 } from 'lucide-react';
+import { Twitter, Instagram, ShoppingCart, Facebook, Music2, Globe } from 'lucide-react';
 import './index.css';
 
 const links = [
-  { name: 'Twitter', url: 'https://x.com/dejdraws?s=21', icon: Twitter, id: '01', x: -200, y: -150 },
-  { name: 'Instagram', url: 'https://www.instagram.com/lildejix?igsh=MTI2czM5anE5MjNyYQ%3D%3D&utm_source=qr', icon: Instagram, id: '02', x: 200, y: -100 },
-  { name: 'TikTok', url: 'https://www.tiktok.com/@dejdraws?_r=1&_t=ZS-92enPqFdJRv', icon: Music2, id: '03', x: -180, y: 150 },
-  { name: 'Etsy Store', url: 'https://www.etsy.com/ca/shop/DejDraws', icon: ShoppingCart, id: '04', x: 220, y: 120 },
-  { name: 'Facebook', url: 'https://www.facebook.com/share/17ktDh76rP/?mibextid=wwXIfr', icon: Facebook, id: '05', x: 0, y: 220 },
+  { name: 'Twitter', url: 'https://x.com/dejdraws?s=21', icon: Twitter, id: '01', x: -220, y: -180 },
+  { name: 'Instagram', url: 'https://www.instagram.com/lildejix?igsh=MTI2czM5anE5MjNyYQ%3D%3D&utm_source=qr', icon: Instagram, id: '02', x: 220, y: -130 },
+  { name: 'TikTok', url: 'https://www.tiktok.com/@dejdraws?_r=1&_t=ZS-92enPqFdJRv', icon: Music2, id: '03', x: -220, y: 130 },
+  { name: 'Etsy Store', url: 'https://www.etsy.com/ca/shop/DejDraws', icon: ShoppingCart, id: '04', x: 230, y: 100 },
+  { name: 'Facebook', url: 'https://www.facebook.com/share/17ktDh76rP/?mibextid=wwXIfr', icon: Facebook, id: '05', x: -80, y: 240 },
+  { name: 'Art Portfolio', url: 'https://readymag.website/u450056467/6636442/', icon: Globe, id: '06', x: 110, y: 240 },
 ];
 
 function App() {
